@@ -18,6 +18,7 @@ export default function List(){
 		<form onSubmit={sendemail}>
                
                <input
+                className="title__input"
                   type="text"
                   name="title"
                   placeholder="enter the title for your grocerylist"
@@ -25,6 +26,7 @@ export default function List(){
 <br/>
              <div className="list__input">
                <input
+               className="item__input"
                  type="text"
                  name="item1"
                  placeholder="item1"
@@ -38,6 +40,7 @@ export default function List(){
 
                <div className="list__input">
                <input
+               className="item__input"
                  type="text"
                  name="item2"
                  placeholder="item2"
@@ -51,7 +54,9 @@ export default function List(){
 
                <div className="list__input">
                <input
-                 type="text"
+               className="item__input"
+
+              type="text"
                  name="item3"
                  placeholder="item3"
                />
@@ -63,6 +68,7 @@ export default function List(){
                </div>
                <br/>
                <input
+               className="email__input"
                 type="email"
                 name="useremail"
                 placeholder="enter your email address"

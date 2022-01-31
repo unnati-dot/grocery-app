@@ -1,3 +1,50 @@
 .list__input{
 display: flex;
+padding: 15px;
+
+}
+.item__input{
+	margin-right: 20px;
+}
+form{
+	
+	align-content: center;
+	margin-top: 10vh;
+	margin-left: 20vw;
+	width: 60%;
+	height: 80%;
+	/*border: 1px solid;*/
+}
+input{
+	font-size:30px;
+	font-family: cursive;
+	margin-bottom: 10px;
+	outline: none;
+}
+.title__input {
+   margin-left: 30%;
+   margin-top: 3%;
+	
+}
+.email__input{
+	margin-left: 30%;
+  
+}
+button{
+	background-color: lightgray;
+	font-size:20px;
+	padding: 20px;
+	width: 20%;
+	color: gray;
+	border: none;
+	border-radius: 5px;
+	margin-top: 5%;
+    margin-left: 40%;
+    cursor: pointer;
+}
+button:hover{
+	background-color: darkgrey;
+	font-size: 25px;
+	color: papayawhip;
+
 }
