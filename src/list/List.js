@@ -36,6 +36,13 @@ export default function List(){
                	 name="q1"
                	 placeholder="0"
                />
+               <select>
+               <option>kg</option>
+               <option>grams</option>
+               <option>quantity</option>
+               <option>litre</option>
+              
+               </select>
                </div>
 
                <div className="list__input">
@@ -50,6 +57,13 @@ export default function List(){
                	 name="q2"
                	 placeholder="0"
                />
+               <select>
+               <option>kg</option>
+               <option>grams</option>
+               <option>quantity</option>
+               <option>litre</option>
+              
+               </select>
                </div>
 
                <div className="list__input">
@@ -65,6 +79,13 @@ export default function List(){
                	 name="q3"
                	 placeholder="0"
                />
+               <select>
+               <option>kg</option>
+               <option>grams</option>
+               <option>quantity</option>
+               <option>litre</option>
+              
+               </select>
                </div>
                <br/>
                <input
