@@ -88,15 +88,16 @@ export default function List(){
                </select>
                </div>
                <br/>
+               <div className="footer">
                <input
-               className="email__input"
+                className="email__input"
                 type="email"
                 name="useremail"
                 placeholder="enter your email address"
                />
-               <br/>
                <button type="submit">submit</button>
-		</form>
+		           </div>
+    </form>
 
 		)
 }
