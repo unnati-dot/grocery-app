@@ -1,8 +1,33 @@
 import "./list.css"
 import emailjs from "emailjs-com"
+import {v4 as uuidv4} from "uuid";
 
-export default function List(){
-   function sendemail(e){
+
+export default function List({todos,setTodos,input,setInput,quant,setQuant,si,setSi}){
+
+function oninputChange(e){
+  e.preventDefault();
+  setInput(e.target.value);
+}
+function onquantChange(e){
+  e.preventDefault();
+  setQuant(e.target.value);
+}
+function onselectChange(e){
+  e.preventDefault();
+  setSi(e.target.value);
+}
+
+
+  function onAdd(e){
+       e.preventDefault();
+       setTodos([...todos,{id: uuidv4(),title:input,q:quant,si:si}])
+       setInput("");
+       setQuant(0);
+       setSi("");
+  }
+   
+function sendemail(e){
    	e.preventDefault();
 
    	emailjs.sendForm(process.env.REACT_APP_SERVICEID,
@@ -20,8 +45,9 @@ export default function List(){
                <input
                 className="title__input"
                   type="text"
-                  name="title"
                   placeholder="enter the title for your grocerylist"
+                  required="true"
+
                />
 <br/>
              <div className="list__input">
@@ -29,65 +55,30 @@ export default function List(){
                className="item__input"
                  type="text"
                  name="item1"
+                 value={input}
                  placeholder="item1"
+                 onChange={oninputChange}
+                 required="true"
                />
                <input
                	 type="number"
                	 name="q1"
+                 value={quant}
                	 placeholder="0"
+                 onChange={onquantChange}
+                 required="true"
                />
-               <select>
+               <select value={si} required="true" onChange={onselectChange}>
                <option>kg</option>
                <option>grams</option>
                <option>quantity</option>
                <option>litre</option>
               
                </select>
+               <button onClick={onAdd}>Add</button>
                </div>
 
-               <div className="list__input">
-               <input
-               className="item__input"
-                 type="text"
-                 name="item2"
-                 placeholder="item2"
-               />
-               <input
-               	 type="number"
-               	 name="q2"
-               	 placeholder="0"
-               />
-               <select>
-               <option>kg</option>
-               <option>grams</option>
-               <option>quantity</option>
-               <option>litre</option>
-              
-               </select>
-               </div>
-
-               <div className="list__input">
-               <input
-               className="item__input"
-
-              type="text"
-                 name="item3"
-                 placeholder="item3"
-               />
-               <input
-               	 type="number"
-               	 name="q3"
-               	 placeholder="0"
-               />
-               <select>
-               <option>kg</option>
-               <option>grams</option>
-               <option>quantity</option>
-               <option>litre</option>
-              
-               </select>
-               </div>
-               <br/>
+              <br/>
                <div className="footer">
                <input
                 className="email__input"

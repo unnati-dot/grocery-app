@@ -5,6 +5,17 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	z-index: 0;
+	height: 30vh;
+	width: -3500px;
+}
+.wave1{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	height: 30vh;
+	width: 3820px;
 }
 .header{
 	background-color: #C3DBD9;
